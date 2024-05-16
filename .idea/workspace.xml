@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="Start of test task for Kata Academy">
+    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="main method and String input with split">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" afterDir="false" />
     </list>
@@ -185,7 +185,7 @@
       <workItem from="1715654849656" duration="13704000" />
       <workItem from="1715767478937" duration="312000" />
       <workItem from="1715832122573" duration="552000" />
-      <workItem from="1715832697396" duration="2484000" />
+      <workItem from="1715832697396" duration="4264000" />
     </task>
     <task id="LOCAL-00001" summary="Start of test task for Kata Academy">
       <option name="closed" value="true" />
@@ -203,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715832937039</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="main method and String input with split">
+      <option name="closed" value="true" />
+      <created>1715835355110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715835355110</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +220,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Void body of test" />
     <MESSAGE value="Start of test task for Kata Academy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start of test task for Kata Academy" />
+    <MESSAGE value="main method and String input with split" />
+    <option name="LAST_COMMIT_MESSAGE" value="main method and String input with split" />
   </component>
 </project>
