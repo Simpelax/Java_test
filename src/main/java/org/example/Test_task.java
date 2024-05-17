@@ -20,24 +20,45 @@ class Calculator {
             return 0; // проверка на 2 оператора и 1 операнд
         }
         int firstSymbol = Integer.parseInt(symbols[0]); // перевод строки на входе с консоли в числа
-        String operation = symbols[1];
-        int secondSymbol = Integer.parseInt(symbols[2]);
-        int total = 0;
-        if (operation.equals("+")) {
-            total = firstSymbol + secondSymbol;
-        } else if (operation.equals("-")) {
-            total = firstSymbol - secondSymbol;
-        } else if (operation.equals("*")) {
-            total = firstSymbol * secondSymbol;
-        } else if (operation.equals("/")) {
-            if (secondSymbol == 0 && firstSymbol == 0) {
-                System.out.println("Cannot divide by zero");
-                return 0; // деление на ноль
+        try {
+            if (firstSymbol > 10) {
+                throw new IllegalArgumentException("Operand cannot be more than 10.");
             }
-            total = firstSymbol / secondSymbol;
-        } else {
-            System.out.println("Invalid operation");
-            return 0; // Return a default value as an error indicator
+        } catch (NumberFormatException E) {
+            System.out.println("Error: write single number.");
+        }
+        String operation = symbols[1];
+
+        int secondSymbol = Integer.parseInt(symbols[2]);
+
+        try {
+            if (secondSymbol > 10) {
+                throw new IllegalArgumentException("Operand cannot be more than 10.");
+            }
+        } catch (NumberFormatException E) {
+            System.out.println("ERROR: write single number.");
+        }
+        int total = 0;
+        try {
+            if (operation.equals("+")) {
+                total = firstSymbol + secondSymbol;
+            } else if (operation.equals("-")) {
+                total = firstSymbol - secondSymbol;
+            } else if (operation.equals("*")) {
+                total = firstSymbol * secondSymbol;
+            } else if (operation.equals("/")) {
+                if (secondSymbol == 0 || firstSymbol == 0) {
+                    System.out.println("Error: Cannot divide by zero");
+                    return 0; // деление на ноль
+                }
+                total = firstSymbol / secondSymbol;
+            } else {
+                System.out.println("Invalid operation");
+                return 0; // возвращает значение по умолчанию в качестве индентификатор ошибки
+            }
+        } catch (IllegalAccessError e) {
+            if (operation != "+" || operation != "-" || operation != "*" || operation != "/") {
+                throw new IllegalArgumentException("ERROR:Invalid operation"); }
         }
         return total;
     }

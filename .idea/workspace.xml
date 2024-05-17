@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="fix method Calc">
+    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="Exceptions successfully learned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
       <recent name="C:\Users\Simpelax\IdeaProjects\First\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Exceptions">
+  <component name="RunManager">
     <configuration name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Arrays" />
       <module name="Here we go again" />
@@ -189,7 +189,7 @@
       <workItem from="1715767478937" duration="312000" />
       <workItem from="1715832122573" duration="552000" />
       <workItem from="1715832697396" duration="11897000" />
-      <workItem from="1715920102912" duration="5420000" />
+      <workItem from="1715920102912" duration="8119000" />
     </task>
     <task id="LOCAL-00001" summary="Start of test task for Kata Academy">
       <option name="closed" value="true" />
@@ -223,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715837219921</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Exceptions successfully learned">
+      <option name="closed" value="true" />
+      <created>1715940013851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715940013852</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +242,7 @@
     <MESSAGE value="Start of test task for Kata Academy" />
     <MESSAGE value="main method and String input with split" />
     <MESSAGE value="fix method Calc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix method Calc" />
+    <MESSAGE value="Exceptions successfully learned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exceptions successfully learned" />
   </component>
 </project>
