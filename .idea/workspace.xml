@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="Try\catch successfully learned and used">
+    <list default="true" id="3cfefecd-395e-4bbb-b706-42244bdd3dd9" name="Changes" comment="added RomanCalculator method&#10;added arabicToRoman method&#10;added romanToArabic method&#10;added calculate method&#10;added commentaries for code lines&#10;fixed try catch's constructions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Test_task.java" afterDir="false" />
     </list>
@@ -32,41 +32,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Arrays.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Arrays_of_Strings.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Break_Continue$Continue.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Break_Continue.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Calculator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Exceptions.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ForLoop.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Input.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoopsWhile.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Multidimensional_arrays.executor&quot;: &quot;Run&quot;,
-    &quot;Application.String.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Switch.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test_task.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ifs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;simpelaxBranch&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Simpelax/IdeaProjects/First/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Arrays.executor": "Run",
+    "Application.Arrays_of_Strings.executor": "Run",
+    "Application.Break_Continue$Continue.executor": "Run",
+    "Application.Break_Continue.executor": "Run",
+    "Application.Calculator.executor": "Debug",
+    "Application.Exceptions.executor": "Run",
+    "Application.ForLoop.executor": "Run",
+    "Application.Input.executor": "Run",
+    "Application.LoopsWhile.executor": "Run",
+    "Application.Multidimensional_arrays.executor": "Run",
+    "Application.String.executor": "Run",
+    "Application.Switch.executor": "Run",
+    "Application.Test_task.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.ifs.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "simpelaxBranch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Simpelax/IdeaProjects/First/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Simpelax\IdeaProjects\First\src\main\java" />
@@ -191,7 +191,7 @@
       <workItem from="1715832697396" duration="11897000" />
       <workItem from="1715920102912" duration="15188000" />
       <workItem from="1716051603699" duration="2014000" />
-      <workItem from="1716095084960" duration="5060000" />
+      <workItem from="1716095084960" duration="8058000" />
     </task>
     <task id="LOCAL-00001" summary="Start of test task for Kata Academy">
       <option name="closed" value="true" />
@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715942709625</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added RomanCalculator method&#10;added arabicToRoman method&#10;added romanToArabic method&#10;added calculate method&#10;added commentaries for code lines&#10;fixed try catch's constructions">
+      <option name="closed" value="true" />
+      <created>1716101911107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716101911107</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +262,18 @@
     <MESSAGE value="fix method Calc" />
     <MESSAGE value="Exceptions successfully learned" />
     <MESSAGE value="Try\catch successfully learned and used" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try\catch successfully learned and used" />
+    <MESSAGE value="added RomanCalculator method&#10;added arabicToRoman method&#10;added romanToArabic method&#10;added calculate method&#10;added commentaries for code lines&#10;fixed try catch's constructions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added RomanCalculator method&#10;added arabicToRoman method&#10;added romanToArabic method&#10;added calculate method&#10;added commentaries for code lines&#10;fixed try catch's constructions" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Test_task.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 class Calculator {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("__Calculator__");
         System.out.println("Write your expression:");
         Scanner s = new Scanner(System.in);
         String input = s.nextLine();
-        boolean isArabicInput = input.matches("[0-9]+");
+        String[] symbols = input.split(" ");
+        boolean isArabicInput = symbols[0].matches("[0-9]+");
         if (isArabicInput) {
             int result = calc(input);  // берём с psS calc(String input)
             System.out.println("The result is: " + result);
@@ -20,18 +21,14 @@ class Calculator {
     }
     // Метод для обработки арабских чисел
     public static int calc(String input) {
-        String[] symbols = input.trim().split(" "); // выражение в массив посимвольно и разбить по пробелам на части
+        String[] symbols = input.trim().split(" ");
         if (symbols.length != 3) {
             System.out.println("Invalid input");
-            return 0; // проверка на 2 оператора и 1 операнд
+            return 0;
         }
 
-        int firstSymbol = Integer.parseInt(symbols[0]); // перевод строки на входе с консоли в числа
-        try {
-            if (firstSymbol > 10) {
-                throw new IllegalArgumentException("Operand cannot be more than 10.");
-            }
-        } catch (IllegalArgumentException e) {
+        int firstSymbol = Integer.parseInt(symbols[0]);
+        if (firstSymbol > 10) {
             System.out.println("Error: Operand cannot be more than 10.");
             return 0;
         }
@@ -39,46 +36,36 @@ class Calculator {
         String operation = symbols[1];
 
         int secondSymbol = Integer.parseInt(symbols[2]);
-        try {
-            if (secondSymbol > 10) {
-                throw new IllegalArgumentException("Operand cannot be more than 10.");
-            }
-        } catch (IllegalArgumentException e) {
+        if (secondSymbol > 10) {
             System.out.println("Error: Operand cannot be more than 10.");
             return 0;
         }
 
-
         int total = 0;
-        try {
-            switch (operation) {
-                case "+":
-                    total = firstSymbol + secondSymbol;
-                    break;
-                case "-":
-                    total = firstSymbol - secondSymbol;
-                    break;
-                case "*":
-                    total = firstSymbol * secondSymbol;
-                    break;
-                case "/":
-                    if (secondSymbol == 0 ) {
-                        System.out.println("Error: Cannot divide by zero");
-                        return 0; // возвращает значение по умолчанию в качестве индентификатор ошибки
-                    }
-                    total = firstSymbol / secondSymbol;
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid operation"); // возвращает значение по умолчанию в качестве индентификатор ошибки
-            }
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
-            return 0;
+        switch (operation) {
+            case "+":
+                total = firstSymbol + secondSymbol;
+                break;
+            case "-":
+                total = firstSymbol - secondSymbol;
+                break;
+            case "*":
+                total = firstSymbol * secondSymbol;
+                break;
+            case "/":
+                if (secondSymbol == 0) {
+                    System.out.println("Error: Cannot divide by zero");
+                    return 0;
+                }
+                total = firstSymbol / secondSymbol;
+                break;
+            default:
+                System.out.println("Invalid operation");
+                return 0;
         }
         return total;
     }
-
-    public class RomanCalculator {
+    public static class RomanCalculator {
         private final static String[] romanNumerals = {"I","IV", "V", "IX", "X"};
 
             // Метод для обработки римских чисел
@@ -132,14 +119,14 @@ class Calculator {
             } else if (c == 'V') {
                 // Дополнительная логика для символа V с учетом предыдущего символа I
                 if (i > 0 && roman.charAt(i - 1) == 'I') {
-                    result += 3;
+                    result += 4;
                 } else {
                     result += 5;
                 }
             } else if (c == 'X') {
                 // Дополнительная логика для символа X с учетом предыдущего символа I
                 if (i > 0 && roman.charAt(i - 1) == 'I') {
-                    result += 8;
+                    result += 9;
                 } else {
                     result += 10;
                 }
